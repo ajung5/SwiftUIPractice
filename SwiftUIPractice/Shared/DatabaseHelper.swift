@@ -30,36 +30,3 @@ struct DatabaseHelper {
         return users.users
     }
 }
-
-// MARK: Product Array
-struct ProductArray: Codable {
-    let products: [Product]
-    let total, skip, linit: Int
-}
-
-struct Product: Codable {
-    let id: Int
-    let title, description: String
-    let price: Int
-    let discountPercentage, rating: Double
-    let stock: Int
-    let brand, category: String
-    let thumbnail: String
-    let images: [String]
-}
-
-// MARK: User Array
-struct UserArray: Codable {
-    let users: [User]
-    let total, skip, limit: Int
-}
-
-struct User: Codable {
-    let id: Int
-    let firstName, lastName: String
-    let age: Int
-    let email, phone, username, password: String
-    let image: String
-    let height: Int
-    let weight: Double
-}
